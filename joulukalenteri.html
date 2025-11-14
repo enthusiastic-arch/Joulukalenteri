@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joulukalenteri</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div id="calendar"></div>
+  <h1>Joulukalenteri</h1>
+
+  <script>
+    const calendar = document.getElementById('calendar');
+    const today = new Date().getDate(); // nykyinen päivä 1-31
+
+    // Luo 24 luukkua
+    for (let i = 1; i <= 24; i++) {
+      const door = document.createElement('div');
+      door.classList.add('door');
+
+        door.dataset.day = i; // lisää data-day attribuutti
+
+      // Korosta tämän päivän luukku
+      if (i === today) {
+        door.classList.add('today');
+      }
+
+
+      // Tarkista, onko luukku vielä lukittu
+      if (i > today) {
+        door.classList.add('locked');
+      }
+
+      door.textContent = i;
+      
+      // Click-event
+      door.addEventListener('click', () => {
+        if (door.classList.contains('locked')) {
+          alert("Tämä luukku on vielä lukittu!");
+        } else if (!door.classList.contains('open')) {
+          door.classList.add('open');
+          door.textContent = "🎁"; // voit laittaa yllätyksen tähän
+        }
+      });
+
+      calendar.appendChild(door);
+    }
+  </script>
+</body>
+</html>
