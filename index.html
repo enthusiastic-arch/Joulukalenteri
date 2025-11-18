@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joulukalenteri</title>
+</head>
+
+<script>
+    // Esimerkki vaiheet:
+    // Luo HTML pohja, jossa joka luukulle oma elementti ja pohja pop-up elemntille
+    //      Pop-up elementti on aluksi piilotettu
+    // Luo CSS tiedosto jossa luukuille määritelty tyylit
+    // Luo Javascript logiikka:
+    //      Joka luukulle oma event listener joka seuraa luukun klikkausta.
+    //      Kun luukkua klikataan, niin javascript lisää halutun sisällön pop-up elementille ja tuo sen esiin.
+</script>
+
+<body>
+    <h1>Joulukalenteri</h1>
+
+    <div id="popup1" class="hidden popup">
+        <p>Olen valmiiksi tehty popup ikkuna!</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgVfHORQFLyUf_rNove-xUmxIskDeMJ63REz_YIMQ6S0vCyQdkBvJos4igKspvCgpqnpy8h0xM--1uckzZIxDgyoHy37-MowkF-YzvVx8&s=10" alt="">
+    </div>
+
+    <div id="calendar">
+        <div id="luukku1" class="door" onclick="luukku_1_klikattu()">1</div>
+        <div class="door">2</div>
+        <div class="door">3</div>
+        <div class="door">4</div>
+        <div class="door">5</div>
+        <div class="door">6</div>
+        <div class="door">7</div>
+        <div class="door">8</div>
+        <div class="door">9</div>
+        <div class="door">10</div>
+        <div class="door">11</div>
+        <div class="door">12</div>
+        <div class="door">13</div>
+        <div class="door">14</div>
+        <div class="door">15</div>
+        <div class="door">16</div>
+        <div class="door">17</div>
+        <div class="door">18</div>
+        <div class="door">19</div>
+        <div class="door">20</div>
+        <div class="door">21</div>
+        <div class="door">22</div>
+        <div class="door">23</div>
+        <div class="door">24</div>
+    </div>
+</body>
+
+<script>
+    // Tämä script hakee kaikki luukut ja lukitsee ne luukut joita ei saa vielä avata
+
+    // Haetaan kaikki luukut
+    // getElementsByClassName() voidaan targetoida kaikki <div> elementit joilla on class "door"
+    let luukut = document.getElementsByClassName("door")
+    
+    // Nykyinen päivämäärä
+     const today = new Date().getDate();
+
+    // Lukitaan luukut joita ei saa vielä avata
+    for (let i = 0; i < luukut.length; i++) {
+        let kierros_luukku = luukut[i]
+
+        // Annetaan luukulle dataset tieto päivämäärästä, esim i = 1
+        kierros_luukku.dataset.day = i; 
+
+        // Jos luukku on tänään, lisätään today class
+        if (i === today) {
+            kierros_luukku.classList.add('today');
+        }
+        
+        // Jos luukun päivämäärä on tulevaisuudessa lisätään locked luokka ja
+        // Lisätään alert ilmoitus että luukku on vielä lukossa
+        if (i > today) {
+            // Locked luokan lisäys
+            kierros_luukku.classList.add('locked');
+            
+            // Lukittu ilmoitus
+            kierros_luukku.addEventListener('click', () => {
+                alert("Tämä luukku on vielä lukittu!");  
+            });
+        }        
+    }
+</script>
+
+<script>
+    // Tässä esimerkki scripti kuinka tuoda pop-up esiin
+
+    function luukku_1_klikattu() {
+        // Haetaan popup ikkuna
+        let popup = document.getElementById("popup1");
+
+        // tuodaan popup esiin poistamalla hidden class
+        popup.classList.remove("hidden")
+    }
+    
+
+    // Mitä seuraavaksi lähdetään tekemään:
+    // 1. Jokaiselle luukulle oma popup ikkuna
+    // 2. Määritellään popupeille CSS tiedostossa tyyli (lisää class popupeille)
+    // 3. Jotta popup ilmestyy keskelle, sen positio täytyy olla absoluuttinen, ja hyvä olla taustaväri
+    // 4. Hover efekti ? 
+</script>
+
+</html>
