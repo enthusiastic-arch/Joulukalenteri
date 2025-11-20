@@ -82,6 +82,7 @@
     
     // Nykyinen päivämäärä
      const today = new Date().getDate();
+   // let month = today.getMonth(); "kuukausi nyt"
 
     // Lukitaan luukut joita ei saa vielä avata
     for (let i = 0; i < luukut.length; i++) {
@@ -100,7 +101,12 @@
         if (i > today) {
             // Locked luokan lisäys
             kierros_luukku.classList.add('locked');
-            
+
+        
+        // if (month !== 11) { lukitaan kalenteri jos ei ole joulukuu? 
+        
+       // kierros_luukku.classList.add('locked');
+
             // Lukittu ilmoitus
             kierros_luukku.addEventListener('click', () => {
                 alert("Tämä luukku on vielä lukittu!");  
@@ -129,4 +135,5 @@
 </script>
 
 </html>
+
 
