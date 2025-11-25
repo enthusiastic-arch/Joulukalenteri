@@ -50,3 +50,7 @@ h1 {
   box-shadow: 0 0 10px #ffeb3b;
 }
 
+.img {
+max-width:100px;
+}
+
