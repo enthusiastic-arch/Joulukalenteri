@@ -14,27 +14,35 @@
 
 <!-- Pop-uppien sisällöt -->
 
+    <!-- Overlay elementti (popuppien sulkemista varten) -->
+    <div id="overlay" class="hidden popup-overlay"></div> 
+
     <div id="popup1" class="hidden popup">
+        <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
         <p style="font-family:Story Script">Pohjois-Karjalan korkein vaara Pielisen rannassa.</p>
         <img src="Koli.jpg" alt="Kuva Kolilta Pohjois-Karjalan korkeimmasta vaarasta." width="400">
     </div>
 
     <div id="popup2" class="hidden popup">
+        <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
         <p style="font-family:Story Script">Jääkauden siirtämää Kummakiveä voi käydä ihmettelemässä Ruokolahdella.</p>
         <img src="Kummakivi.png" alt="Kuva Kummakivestä Ruokolahdella." width="400">
     </div>
 
     <div id="popup3" class="hidden popup">
+        <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
         <p style="font-family:Story Script">Hiidenkiukaita on esim. Satakunnassa, Varsinais-Suomessa, Kymenlaaksossa ja Pohjanmaalla.<br>Näitä muinaisjäännöksiä epäillään haudoiksi.</p>
         <img src="Hiidenkiuas.png" alt="Kuva Suomen suurimmasta hiidenkiukaasta." width="400">
     </div>
     
     <div id="popup4" class="hidden popup">
+        <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
         <p style="font-family:Story Script">Parikkalan patsaspuisto on vaikuttava taiteellinen kokonaisuus.</p>
         <img src="Patsaspuisto.png" alt="Kuva patsaspuistosta Parikkalassa." width="400">
     </div>
     
     <div id="popup5" class="hidden popup">
+        <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
         <p style="font-family:Story Script">Joka vuosi noin kaksi miljoonaa kiloa hiekkaa käytetään Lappeenrannan Hiekkalinna-tapahtuman veistoksiin.</p>
         <img src="Hiekkalinna.png" alt="Kuva Lappeenrannan Hiekkalinna-tapahtumasta." width="400">
     </div>
@@ -111,7 +119,6 @@
     }
 </script>
 
-
 <!-- LUUKKUJEN 1-5 POP-UPPIEN AVAUS -->
 
 <script>
@@ -154,12 +161,17 @@
     }
 </script>
 
+<!-- Tämä scripti lisää toiminnallisuuden popuppien sulkemiseen -->
+<script>
+function showPopup(id) {
+    document.getElementById(id).classList.remove("hidden");
+    document.getElementById("overlay").classList.remove("hidden");
+}
+
+function closePopup(id) {
+    document.getElementById(id).classList.add("hidden");
+    document.getElementById("overlay").classList.add("hidden");
+}
+</script>
 
 </html>
-
-
-
-
-
-
-
