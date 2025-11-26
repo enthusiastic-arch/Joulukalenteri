@@ -1,18 +1,17 @@
 Esimerkki vaiheet:
-Luo HTML pohja, jossa joka luukulle oma elementti ja pohja pop-up elemntille
+Luo HTML pohja, jossa joka luukulle oma elementti ja pohja pop-up elementille
 Pop-up elementti on aluksi piilotettu
-Luo CSS tiedosto jossa luukuille määritelty tyylit
+Luo CSS tiedosto jossa luukuille määritelty tyylit                                                    Tehty
 
 Luo Javascript logiikka:
 Joka luukulle oma event listener joka seuraa luukun klikkausta.
-Kun luukkua klikataan, niin javascript lisää halutun sisällön pop-up elementille ja tuo sen esiin.
-
+Kun luukkua klikataan, niin javascript lisää halutun sisällön pop-up elementille ja tuo sen esiin.    Tehty
 
 
 Mitä seuraavaksi lähdetään tekemään:
-1. Jokaiselle luukulle oma popup ikkuna (tehty)
-2. Määritellään popupeille CSS tiedostossa tyyli (lisää class popupeille)
-3. Jotta popup ilmestyy keskelle, sen positio täytyy olla absoluuttinen, ja hyvä olla taustaväri
-4. Lisää scripti joka antaa sulkea pop up ikkunan
-5. Hover efekti ?
+1. Jokaiselle luukulle oma popup ikkuna                                                               Tehty
+2. Määritellään popupeille CSS tiedostossa tyyli (lisää class popupeille)                             Tehty
+3. Jotta popup ilmestyy keskelle, sen positio täytyy olla absoluuttinen, ja hyvä olla taustaväri      Tehty
+4. Lisää scripti joka antaa sulkea pop up ikkunan                                                     Tehty
+5. Hover efekti ?                                                                                     Tehdään eri tavalla
 
