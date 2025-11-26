@@ -1,10 +1,17 @@
+html, body {
+  height: 100%;              /* Varmistaa täyden korkeuden */
+  margin: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;         /* Vähintään koko näkymän korkeus */
   font-family: sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center; 
-  background-image: url('Northernlights.jpg');
+  background-image: url('Northernlights.jpg');  /* Taustakuvan asettelu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,10 +21,10 @@ body {
 h1 {
   font-size: 32px;
   color: #d32f2f;
-  margin-top: 20px; 
+  margin-top: 75px; 
 }
 
-.hidden {
+.hidden {                                /* hidden luokan määrittely */
   display: none;
 }
 
@@ -27,84 +34,89 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 14px;
-  margin-top: 50px
+  margin-top: 50px;
 }
 
-.footer-linkki {
+.footer-linkki {                        /* Footerin linkeille oma tyyli */
   color: white;
   text-decoration: underline;
   font-weight: bold;
 }
 
-.footer-linkki:hover {
+.footer-linkki:hover {                  /* Ja hover efekti */
   color: red;
 }
 
 #calendar {
+  flex: 1;                              /* Työntää footerin alas */
   display: grid;
   grid-template-columns: repeat(6, 120px);
   grid-gap: 10px;
   justify-content: center; 
-  margin-top: 100px;
-  margin-bottom: 150px;
-    }
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
 
-    .door {
-      width: 110px;
-      height: 110px;
-      margin: 10px;
-      background-color: #d32f2f;
-      color: white;
-      font-size: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      border-radius: 40px;
-      transition: background-color 0.3s;
-    }
-    .door.locked {
-      background-color: #9e9e9e;
-      cursor: not-allowed;
-    }
-    .door.open {
-      background-color: #4caf50;
-    }
-    .door.today {
-  border: 3px solid #ffeb3b; 
+.door {                                  /* Luukkujen tyyli */
+  width: 110px;
+  height: 110px;
+  margin: 10px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+}
+
+.door.locked {                            /* Lukittujen luukkujen tyyli */
+  background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+.door.open {
+  background-color: #4caf50;
+}
+
+.door.today {                              /* Kyseisen päivän luukun ympärys tyyli */
+  border: 3px solid white; 
   box-shadow: 0 0 10px #ffeb3b;
 }
 
-.img {
-max-width:100px;
-}
-
-.story-script-regular {
-  font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
+.popup {                                   /* Pop-up ikkunan tyyli */
+  position: fixed;                         /* Pitää ikkunan paikallaan, vaikka sivua selataan */
+  top: 50%;                                /* Keskittää pop-upin */
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  z-index: 1000;                           /* Pop-up näkyy muiden elementtien päällä */
   max-width: 90%;
   text-align: center;
 }
 
-.popup img {
+.popup img {                               /* Pop-uppien kuvien tyyli */
   max-width: 100%;
   border-radius: 8px;
 }
 
-.sulkemisikoni {
+.popup-overlay {                           /* Tausta popupin takana */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);        /* Tumma 50% läpinäkyvä kerros himmentää taustan */
+  z-index: 999;                            /* Overlay on popupin alla, mutta muiden elementtien päällä */
+}
+
+
+.sulkemisikoni {                           /* Pop-uppien sulkemisikonin tyyli */
   position: absolute;
   top: 10px;
   right: 15px;
@@ -114,22 +126,7 @@ max-width:100px;
   cursor: pointer;
 }
 
-.sulkemisikoni:hover {
+.sulkemisikoni:hover {                     /* Hover-efekti sulkemisikoneille */
   color: #d32f2f;
   transform: scale(1.2);
-}
-
-.hidden {
-  display: none;
-}
-
-/* Tausta popupin takana */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
 }
