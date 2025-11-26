@@ -4,6 +4,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: center; 
+  background-image: url('Northernlights.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -16,12 +21,32 @@ h1 {
   display: none;
 }
 
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 50px
+}
+
+.footer-linkki {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer-linkki:hover {
+  color: red;
+}
+
 #calendar {
   display: grid;
   grid-template-columns: repeat(6, 120px);
   grid-gap: 10px;
   justify-content: center; 
   margin-top: 100px;
+  margin-bottom: 150px;
     }
 
     .door {
@@ -60,17 +85,6 @@ max-width:100px;
   font-style: normal;
 }
 
-.img {
-max-width:100px;
-}
-
-.story-script-regular {
-  font-family: "Story Script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
 .popup {
   position: fixed;
   top: 50%;
@@ -90,14 +104,19 @@ max-width:100px;
   border-radius: 8px;
 }
 
-.close-btn {
+.sulkemisikoni {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
   color: #333;
   cursor: pointer;
+}
+
+.sulkemisikoni:hover {
+  color: #d32f2f;
+  transform: scale(1.2);
 }
 
 .hidden {

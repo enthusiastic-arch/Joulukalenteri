@@ -11,40 +11,61 @@
 
 <body>
     <h1>Joulukalenteri</h1>
+    <h2>Joka päivä erikoisia suomalaisia nähtävyyksiä!</h2>
 
 <!-- Pop-uppien sisällöt -->
 
     <!-- Overlay elementti (popuppien sulkemista varten) -->
     <div id="overlay" class="hidden popup-overlay"></div> 
 
+    <!-- POPUP 1 -->
     <div id="popup1" class="hidden popup">
-        <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+        <span class="sulkemisikoni" onclick="suljePopup('popup1')">&times;</span>
         <p style="font-family:Story Script">Pohjois-Karjalan korkein vaara Pielisen rannassa.</p>
-        <img src="Koli.jpg" alt="Kuva Kolilta Pohjois-Karjalan korkeimmasta vaarasta." width="400">
+        <figure>
+            <img src="Koli.jpg" alt="Kuva Kolin kansallispuistosta." width="400">
+                <figcaption>“<a href="https://www.flickr.com/photos/ninara/52160668690" title="Koli National Park, Finland">Koli National Park, Finland</a>” by <a href="https://www.flickr.com/photos/ninara/">Ninara</a>, <a href="https://creativecommons.org/licenses/by/2.0/deed.en" rel="license noopener noreferrer">CC BY 2.0</a></figcaption>
+        </figure>
     </div>
 
+    <!-- POPUP 2 -->
     <div id="popup2" class="hidden popup">
-        <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+        <span class="sulkemisikoni" onclick="suljePopup('popup2')">&times;</span>
         <p style="font-family:Story Script">Jääkauden siirtämää Kummakiveä voi käydä ihmettelemässä Ruokolahdella.</p>
-        <img src="Kummakivi.png" alt="Kuva Kummakivestä Ruokolahdella." width="400">
+        <figure>
+            <img src="Kummakivi.jpg" alt="Kuva Kummakivestä Ruokolahdella." width="400">
+                <figcaption>“<a href="https://www.flickr.com/photos/141073098@N02/52279480561" title="Kummakivi">Kummakivi</a>” by <a href="https://www.flickr.com/photos/141073098@N02/">Lyse BxHell</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.en" rel="license noopener noreferrer">CC BY-NC-SA 2.0</a></figcaption>
+        </figure>
     </div>
 
+    <!-- POPUP 3 -->
     <div id="popup3" class="hidden popup">
-        <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
-        <p style="font-family:Story Script">Hiidenkiukaita on esim. Satakunnassa, Varsinais-Suomessa, Kymenlaaksossa ja Pohjanmaalla.<br>Näitä muinaisjäännöksiä epäillään haudoiksi.</p>
-        <img src="Hiidenkiuas.png" alt="Kuva Suomen suurimmasta hiidenkiukaasta." width="400">
+        <span class="sulkemisikoni" onclick="suljePopup('popup3')">&times;</span>
+        <p style="font-family:Story Script">Imatrankoski on Suomen suurin koski.</p>
+        <figure>
+            <img src="Imatrankoski.jpg" alt="Kuva Imatrankoskelta." width="400">
+                <figcaption>“<a href="https://www.flickr.com/photos/alexyv/9427513895" title="Imatrankoski">Imatrankoski</a>” by <a href="https://www.flickr.com/photos/alexyv/">Alexey Ivanov</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en" rel="license noopener noreferrer">CC BY-SA 2.0</a></figcaption>
+        </figure>
     </div>
     
+    <!-- POPUP 4 -->
     <div id="popup4" class="hidden popup">
-        <span class="close-btn" onclick="closePopup('popup4')">&times;</span>
+        <span class="sulkemisikoni" onclick="suljePopup('popup4')">&times;</span>
         <p style="font-family:Story Script">Parikkalan patsaspuisto on vaikuttava taiteellinen kokonaisuus.</p>
-        <img src="Patsaspuisto.png" alt="Kuva patsaspuistosta Parikkalassa." width="400">
+        <figure>
+            <img src="Patsaspuisto.jpg" alt="Kuva patsaspuistosta Parikkalassa." width="400">
+                <figcaption>“<a href="https://www.flickr.com/photos/chivacongelado/7646001018" title="Patsaspuisto">Patsaspuisto</a>” by <a href="https://www.flickr.com/photos/chivacongelado/">Chiva Congelado</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.en" rel="license noopener noreferrer">CC BY-NC-SA 2.0</a></figcaption>
+        </figure>
     </div>
     
+    <!-- POPUP 5 -->
     <div id="popup5" class="hidden popup">
-        <span class="close-btn" onclick="closePopup('popup5')">&times;</span>
+        <span class="sulkemisikoni" onclick="suljePopup('popup5')">&times;</span>
         <p style="font-family:Story Script">Joka vuosi noin kaksi miljoonaa kiloa hiekkaa käytetään Lappeenrannan Hiekkalinna-tapahtuman veistoksiin.</p>
-        <img src="Hiekkalinna.png" alt="Kuva Lappeenrannan Hiekkalinna-tapahtumasta." width="400">
+        <figure>
+            <img src="Hiekkalinna.jpg" alt="Kuva Lappeenrannan Hiekkalinna-tapahtumasta." width="400">
+                <figcaption>“<a href="https://www.flickr.com/photos/discoveringfinland/29430398352" title="Lappeenranta Sandcastle 2011">Lappeenranta Sandcastle 2011</a>” by <a href="https://www.flickr.com/photos/discoveringfinland/">Discovering Finland</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en" rel="license noopener noreferrer">CC BY-SA 2.0</a></figcaption>
+        </figure>
     </div>
 
     <!-- Luukut -->
@@ -163,15 +184,19 @@
 
 <!-- Tämä scripti lisää toiminnallisuuden popuppien sulkemiseen -->
 <script>
-function showPopup(id) {
+function naytaPopup(id) {
     document.getElementById(id).classList.remove("hidden");
     document.getElementById("overlay").classList.remove("hidden");
 }
 
-function closePopup(id) {
+function suljePopup(id) {
     document.getElementById(id).classList.add("hidden");
     document.getElementById("overlay").classList.add("hidden");
 }
 </script>
+
+<footer>
+    <p>Etusivun taustakuva: “<a href="https://www.flickr.com/photos/salman2000/49272982023" class="footer-linkki" title="Äkäslompolo night">Äkäslompolo night</a>” by <a href="https://www.flickr.com/photos/salman2000/" class="footer-linkki">Jyrki Salmi</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.en" class="footer-linkki" rel="license noopener noreferrer">CC BY-NC-SA 2.0</a></p>
+</footer>
 
 </html>
