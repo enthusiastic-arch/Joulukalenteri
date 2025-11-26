@@ -12,6 +12,10 @@ h1 {
   margin-top: 20px; 
 }
 
+.hidden {
+  display: none;
+}
+
 #calendar {
   display: grid;
   grid-template-columns: repeat(6, 120px);
@@ -46,3 +50,12 @@ h1 {
   box-shadow: 0 0 10px #ffeb3b;
 }
 
+.img {
+max-width:100px;
+}
+
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
