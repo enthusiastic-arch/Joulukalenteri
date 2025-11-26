@@ -1,0 +1,4 @@
+Kun teet muutoksia koodiin niin muista
+1. Stage kaikki halutut tiedostot
+2. Commit kaikki halutut tiedostot (Tämä luo ikäänkuin tallennuspisteen)
+3. Push muutokset GitHubiin kaikkien saataville

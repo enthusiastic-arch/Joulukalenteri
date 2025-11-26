@@ -1,0 +1,7 @@
+Mitä seuraavaksi lähdetään tekemään:
+1. Jokaiselle luukulle oma popup ikkuna (tehty)
+2. Määritellään popupeille CSS tiedostossa tyyli (lisää class popupeille)
+3. Jotta popup ilmestyy keskelle, sen positio täytyy olla absoluuttinen, ja hyvä olla taustaväri
+4. Lisää scripti joka antaa sulkea pop up ikkunan
+5. Hover efekti ?
+
