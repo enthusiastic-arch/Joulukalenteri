@@ -107,6 +107,7 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;                           /* Pop-up näkyy muiden elementtien päällä */
   max-width: 90%;
+  width: auto;
   text-align: center;
 }
 
@@ -117,6 +118,7 @@ footer {
 .popup img {                               /* Pop-uppien kuvien tyyli */
   max-width: 100%;
   border-radius: 8px;
+  height: auto;
 }
 
 .popup-overlay {                           /* Tausta popupin takana */
@@ -146,7 +148,7 @@ footer {
 }
 
 
-/* Responsiivisuus (alle 600px kokoiset näytöt */
+/* Responsiivisuus (alle 600px kokoiset näytöt) */
 
 @media (max-width: 600px) {
   #calendar {
@@ -169,5 +171,24 @@ footer {
   h2 {
     font-size: 18px;
   }
+
+  
+  .popup {
+    width: 95%;            /* Popup melkein koko näytön leveys */
+    padding: 10px;
+  }
+
+  
+  .popup img {
+    width: 100%;           /* Kuva täyttää popupin */
+    max-height: 70vh;      /* Ei ylitä näytön korkeutta */
+    object-fit: cover;     /* Skaalaa kauniisti */
+  }
+
+  
+  .popup p {
+    font-size: 18px;       /* Teksti pienemmäksi mobiilissa */
+  }
 }
+
 
