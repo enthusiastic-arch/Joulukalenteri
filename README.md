@@ -1,3 +1,7 @@
+Huom. Tämän tehtävän tekemisessä on käytetty hyödyksi Copilot-tekoälyä.
+Tekoälyä on käytetty hakutyökaluna, ja koodi on kirjoitettu ja testattu itse.
+-Tiina, Anna, Tiia
+
 # Joulukalenteri
 <!DOCTYPE html>
 <html lang="fi">
